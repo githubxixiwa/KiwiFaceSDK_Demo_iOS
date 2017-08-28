@@ -582,7 +582,6 @@
 - (void)didClickCloseVideoButton {
     
     [self dismissViewControllerAnimated:YES completion:^{
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
         
         [self.UIManager popAllView];
         
