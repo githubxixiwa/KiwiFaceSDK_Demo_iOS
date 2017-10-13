@@ -160,6 +160,11 @@
     //1.创建 KWRenderManager对象,指定models文件路径 若不传则默认路径是KWResource.bundle/models
     self.renderManager = [[KWRenderManager alloc] initWithModelPath:self.modelPath isCameraPositionBack:NO];
     
+    //2.KWSDK鉴权提示
+    if ([KWRenderManager renderInitCode] != 0) {
+        [self verifyFailed];
+        return;
+    }
     //3.加载贴纸滤镜
     [self.renderManager loadRender];
 }
