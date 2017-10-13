@@ -66,7 +66,6 @@
 
 #define IsEnglish 0
 
-#define KWStickerDownloadBaseURL @"https://omhooyf5o.qnssl.com"
+#define KWStickerDownloadBaseURL @"https://img.biaoqing.com/face"
 
 #define StickerIconPath @"https://omhopkmng.qnssl.com/"
-

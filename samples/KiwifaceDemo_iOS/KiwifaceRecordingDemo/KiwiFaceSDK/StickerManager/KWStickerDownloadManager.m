@@ -101,8 +101,8 @@
             [NSString stringWithFormat:@"%@/%@/", [[KWStickerManager sharedManager] getStickerPath], self.sticker.stickerName];
     NSURL *url = [NSURL fileURLWithPath:dir];
 
-    NSString *s =
-            [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"img.jpeg"];
+//    NSString *s =
+//            [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"img.jpeg"];
 
     [KWSticker updateStickerAfterDownload:self.sticker DirectoryURL:url sucess:^(KWSticker *sucessSticker) {
 
@@ -180,7 +180,6 @@
         failed(sticker, index);
 
     }];
-
 }
 
 - (void)downloadStickers:(NSArray *)stickers withAnimation:(void (^)(NSInteger index))animating successed:(void (^)(KWSticker *sticker, NSInteger index))success failed:(void (^)(KWSticker *sticker, NSInteger index))failed {
